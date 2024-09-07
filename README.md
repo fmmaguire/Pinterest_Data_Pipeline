@@ -45,6 +45,14 @@ Configure the Amazon EC2 instance to use as an apache Kafka client
   - Create a .user topic for posts user data
   - Create topic Kafka command: `./kafka-topics.sh --bootstrap-server BootstrapServerString --command-config client.properties --create --topic <topic_name>`
 
+Connect MSK cluster to S3 bucket
+- Create a custoom plugin with MSK Connect
+  -  Install Confluent.io AMazon S3 Connector and copy it to your S3 bucket
+  -  Create a custom plugin in the MSK Connect console
+- Create a connector with MSK Connect
+  - Create and configure a connector, update topics.regex and bucket name
+  - Select the IAM role used for authentication to the MSK cluster in the Access permissions tab
+
 #### File structure
 To be added.
 
