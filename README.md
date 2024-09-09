@@ -22,6 +22,7 @@ This repo should serve as a guide on how to set up AWS and operate Kafka data pr
 Download dummy data: [Pinterest data](https://aicore-portal-public-prod-307050600709.s3.eu-west-1.amazonaws.com/project-files/eec4e4d1-56ca-4ce9-aa4b-bedb3c84f31f/user_posting_emulation.py)\
 Download kafka: [Kafka package](https://archive.apache.org/dist/kafka/3.0.0/kafka_2.13-3.0.0.tgz)
 Download IAM MSK authentication package: [IAM MSK authentication package](https://github.com/aws/aws-msk-iam-auth)
+Download Confluent Kafka REST Proxy package: [Confluent package](https://packages.confluent.io/archive/7.2/confluent-7.2.0.tar.gz)
 Import random package: `import random`
 
 #### Usage Batch Processing
@@ -52,6 +53,17 @@ Connect MSK cluster to S3 bucket
 - Create a connector with MSK Connect
   - Create and configure a connector, update topics.regex and bucket name
   - Select the IAM role used for authentication to the MSK cluster in the Access permissions tab
+ 
+Configure API in API Gateway
+- Build a Kafka REST proxy integration method for the API
+  - Create a resource that allows you to build a PROXY integration for your API
+  - Create an HTTP ANY method for this resource using the PublicDNS of your EC2 machine for the Endpoint URL.
+  - Deploy the API and save the Invoke URL
+- Set up the Kafka REST proxy on the EC2 client
+  - Modify the kafka-rest.properties file with the IAM authentication needed for the MSK cluster
+  - Start the REST proxy on the EC2 client machine
+- Send data to the API
+  - Modify the user_posting_emulation.py as required to send data to the Kadka topics using the API Invoke URL
 
 #### File structure
 To be added.
