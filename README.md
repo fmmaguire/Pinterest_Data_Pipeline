@@ -65,6 +65,11 @@ Configure API in API Gateway
 - Send data to the API
   - Modify the user_posting_emulation.py as required to send data to the Kadka topics using the API Invoke URL
 
+Access data in Databricks
+-   Mount S3 buket to Databricks
+  - Create dataframes for each dataset
+  - Read in the data from JSONs and save them as tables in databricks
+
 #### File structure
 To be added.
 
