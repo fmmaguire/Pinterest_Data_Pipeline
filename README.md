@@ -66,11 +66,23 @@ Configure API in API Gateway
   - Modify the user_posting_emulation.py as required to send data to the Kadka topics using the API Invoke URL
 
 Access data in Databricks
--   Mount S3 buket to Databricks
+- Mount S3 buket to Databricks
   - Create dataframes for each dataset
   - Read in the data from JSONs and save them as tables in databricks
 
+Data cleaning with Spark
+- Clean the Dataframes
+- Find the most popular category in each country
+- Find which was the mos tpopular category in each year
+- Find the user with the most followers in each country
+- Find the most popular category for different age groups
+- Find the median follower counnt for different age groups
+- Fund how many users have joined each year
+- Find the median follower count of users based on their joining year
+- Find the medina follower count of users based on their joining year and age group 
+
 #### File structure
 To be added.
+Databricks notebook
 
 #### License information
