@@ -81,6 +81,11 @@ Data cleaning with Spark
 - Find the median follower count of users based on their joining year
 - Find the medina follower count of users based on their joining year and age group 
 
+AWS Managed Workflows for Apache Airflow
+- Create and upload a DAG to a MWAA environment
+  - Create MWAA environment, S3 bucket, API token in Databricks and requirements.txt as needed
+- Trigger the DAG to confirm it runs   
+
 #### File structure
 To be added.
 Databricks notebook
