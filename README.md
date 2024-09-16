@@ -86,8 +86,30 @@ AWS Managed Workflows for Apache Airflow
   - Create MWAA environment, S3 bucket, API token in Databricks and requirements.txt as needed
 - Trigger the DAG to confirm it runs   
 
+#### Usage Stream Processing
+AWS Kinesis
+- Create data streams for each of the Pinterest data tables
+- Configure API with Kinesis proxy connection so that it can
+ - List streams in Kinesis
+ - Create, describe and delete streams in Kinesis
+ - Add records to streams in Kinesis
+- Use user_posting_emulation_stream.py to send data to the Kinesis streams
+- Read the data in a Databricks workbook from Kinesis
+- Clean the streaming data
+- Write the streaming data to Delta tables
+
 #### File structure
-To be added.
-Databricks notebook
+user_posting_emulation.py
+- Batch processing data pipeline
+user_posting_emulation_stream.py
+- Stream processing data pipeline
+Mount S3 bucket.ipynb
+- Batch processing data cleaning
+kinesis_streams_notebook.ipynb
+- Stream processing data cleaning
+dag.py
+- Dag template
+CloudPinterestPipeline.png
+- Architecture diagram
 
 #### License information
