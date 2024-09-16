@@ -99,17 +99,17 @@ AWS Kinesis
 - Write the streaming data to Delta tables
 
 #### File structure
-user_posting_emulation.py
-- Batch processing data pipeline
-user_posting_emulation_stream.py
-- Stream processing data pipeline
-Mount S3 bucket.ipynb
-- Batch processing data cleaning
-kinesis_streams_notebook.ipynb
-- Stream processing data cleaning
-dag.py
-- Dag template
-CloudPinterestPipeline.png
-- Architecture diagram
+- user_posting_emulation.py
+  - Batch processing data pipeline
+- user_posting_emulation_stream.py
+  - Stream processing data pipeline
+- Mount S3 bucket.ipynb
+  - Batch processing data cleaning
+- kinesis_streams_notebook.ipynb
+  - Stream processing data cleaning
+- dag.py
+  - Dag template
+- CloudPinterestPipeline.png
+  - Architecture diagram
 
 #### License information
